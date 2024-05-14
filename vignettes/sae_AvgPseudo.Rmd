@@ -1,0 +1,55 @@
+---
+title: "An Application to SAE with Averaging Pseudo Area Level Model on Sample Dataset"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{sae_AvgPseudo}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+## Load package and data
+```{r setup}
+library(saePseudo)
+data("dataVill")
+```
+
+## Fitting Model
+```{r}
+result <- avgPseudo(
+  prov = dataVill$Area1,
+  reg = dataVill$Area2,
+  sub = dataVill$Area3,
+  vill = dataVill$Area4,
+  y = dataVill$ydir_area4,
+  x = dataVill$X1,
+  var = dataVill$vardir_area4,
+  N = dataVill$N,
+  method = "REML"
+)
+```
+
+## Extract estimation
+
+### Estimation for Sub-district Area
+```{r}
+result$Est_Area3
+```
+
+### Estimation for Region Area
+```{r}
+result$Est_Area2
+```
+
+### Estimation for Provincial Area
+```{r}
+result$Est_Area1
+```
+
+
