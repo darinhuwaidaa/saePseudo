@@ -41,7 +41,7 @@ Provides function for small area estimation at area level
 \examples{
 # Load Dataset
 data(dataVill)
-saeAVG.Pseudo <- avgPseudo(prov = dataVill$Area1, reg = dataVill$Area2, sub dataVilldatabangkit_sampel$Area3,
+saeAVG.Pseudo <- avgPseudo(prov = dataVill$Area1, reg = dataVill$Area2, sub = dataVill$Area3,
                  vill = dataVill$Area4, y = dataVill$ydir_area4, x = dataVill$X1, var = dataVill$vardir_area4,
                  N = dataVill$N, method="REML")
 
