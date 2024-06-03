@@ -9,7 +9,7 @@ Authors@R: c(
 Maintainer: Darin Huwaida <darinhuwaida21@gmail.com>
 Description: Provides function for small area estimation at area level
     using averaging pseudo area level model for variables of interest.
-    A dataset produced by data generation are also provided. This package
+    A dataset produced by data generation is also provided. This package
     estimates small areas at the village level and then aggregates them
     to the sub-district, region, and provincial levels.
 License: GPL-3
